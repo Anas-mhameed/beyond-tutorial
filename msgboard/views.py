@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+"""from django.shortcuts import render, redirect"""
 from .models import Message
 from .forms import MessageForm
 
@@ -7,11 +7,11 @@ from .forms import MessageForm
 
 def board(request):
     messages = Message.objects.order_by('-date')
-    #if request.method == "POST":
-    #    form = MessageForm(request.POST)
-    #    if form.is_valid():
-    #        form.save()
-    #        return redirect('board')
-    #else:
-    #    form = MessageForm() = > 'form': form, 
+    """if request.method == "POST":
+        form = MessageForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('board')
+    else:
+        form = MessageForm() = > 'form': form,""" 
     return render(request, 'msgboard/board.html', {'messages': messages, })
