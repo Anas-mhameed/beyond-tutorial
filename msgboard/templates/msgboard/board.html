@@ -7,8 +7,7 @@
 		</style>
 	</head>
 	<body>
-		<h1>Beyond message board</h1>
-		<!--<div class="newfrm">
+	<!--<div class="newfrm">
 			<p class="newmsg">New message:</p>
 			<form method="POST">
 				{% csrf_token %}
@@ -16,6 +15,7 @@
 				<input type="submit" value="Post">
 			</form>
 		</div> !-->
+		<h1>Beyond message board</h1>
 		{% for message in messages %}
 		<div class="message">
 			<p class="author">
