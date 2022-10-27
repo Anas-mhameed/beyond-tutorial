@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Message
+from .forms import MessageForm
 
-# from .forms import MessageForm
+# Create your views here.
 # Create your views here.
 
 
@@ -16,4 +17,3 @@ def board(request):
     else:
         form = MessageForm()
     return render(request, 'msgboard/board.html', {'messages': messages, 'form': form, })
-
